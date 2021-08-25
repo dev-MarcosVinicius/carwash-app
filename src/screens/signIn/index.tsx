@@ -27,7 +27,7 @@ export function SignIn() {
             />
 
             <View style={styles.content}>
-                <Text style={styles.subtitle}>
+                <Text style={styles.title}>
                     Agende suas lavagens
                 </Text>
 
@@ -36,10 +36,12 @@ export function SignIn() {
                     ?
                     <ActivityIndicator color={theme.colors.heading}/>
                     :
-                    <ButtonIcon 
-                        title='Entrar com Google'
-                        onPress={handleSignIn}
-                    />
+                    <View style={styles.containerButtonIcon}>
+                        <ButtonIcon 
+                            title='Entrar com Google'
+                            onPress={handleSignIn}
+                        />
+                    </View>
                 }
                 
             </View>

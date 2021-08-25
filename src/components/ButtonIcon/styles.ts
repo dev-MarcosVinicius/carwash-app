@@ -13,8 +13,8 @@ export const styles = StyleSheet.create({
     title: {
         flex: 1,
         color: theme.colors.overlay,
-        // fontFamily: theme.fonts.text500,
-        fontSize: 15,
+        fontFamily: theme.fonts.title700,
+        fontSize: 17,
         textAlign: 'center'
     },
     iconWrapper: {
