@@ -1,11 +1,16 @@
-FROM node:8.11.2
+FROM node:latest
 
-RUN mkdir -p /node
+EXPOSE 19000
+EXPOSE 19001
 
-ADD . /node
+ENV ADB\_IP="127.0.0.1"
+ENV REACT\_NATIVE\_PACKAGER\_HOSTNAME="192.255.255.255"
 
-WORKDIR /node
+# RUN apt install android-tools-adb
 
-RUN npm install
+WORKDIR /app
 
-CMD ["node", "server.js"]
+COPY package.json yarn.lock app.json ./
+RUN yarn --network-timeout- 100000
+CMD adb connect $ADB_IP && \
+    yarn run android
