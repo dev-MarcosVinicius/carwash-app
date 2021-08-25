@@ -48,7 +48,7 @@ function AuthProvider({ children }: AuthProviderProps) {
     async function signIn() {
         try {
             setLoading(true);
-            console.log('tesssss')
+
             const result = await Google.logInAsync({
                 androidClientId: '768959155777-u3r4fnov736q79b302kiva8mgr6chl70.apps.googleusercontent.com',
                 // iosClientId: YOUR_CLIENT_ID_HERE, ToDo Implementar autenticador do IOS
@@ -84,7 +84,7 @@ function AuthProvider({ children }: AuthProviderProps) {
         const storage = await AsyncStorage.getItem(COLLECTION_USERS);
 
         if (storage) {
-            const userLogged = JSON.parse(storage) as User;
+            const userLogged = JSON.parse(storage).user as User;
             // api.defaults.headers.authorization = `Bearer ${userLogged.accessToken}`
 
             setUser(userLogged);
