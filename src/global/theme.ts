@@ -3,7 +3,7 @@ export const theme = {
       primary: '#E51C44',
       
       secondary100: '#001076', // new
-      secondary90: '#0D133D',    
+      secondary90: '#003E9A',    
       secondary80: '#408CFF', // new
       secondary75: '#171F52',
       secondary70: '#1B2565',

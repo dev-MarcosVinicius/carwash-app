@@ -15,11 +15,12 @@ import { COLLECTION_USERS } from '../configs/database'
 
 export type User = {
     id: string;
-    userame: string;
-    firstName: string;
-    avatar: string;
+    givenName: string;
+    familyName: string;
+    name: string;
     email: string;
     token: string;
+    photoUrl: string;
 }
 
 type AuthContextData = {
