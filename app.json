@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain"
+      "resizeMode": "cover"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -20,12 +20,21 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "foregroundImage": "./assets/icon.png"
+      },
+      "package": "com.carwash.carwash",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    }
+  },
+  "android": {
+    "config": {
+      "googleSignIn": {
+        "apiKey": "AIzaSyDWOR1jay4oup4WM6ndJPf8ryFvUh2cQ1c",
+        "certificateHash": "1A2D610659A8AF192091BCFF824483336C8E5FA9"
+      }
     }
   }
 }

@@ -3,13 +3,20 @@ import { theme } from "../../global/theme";
 
 export const style = StyleSheet.create({
     container: {
+        width: '100%',
         flexDirection: 'row',
         marginTop: 10,
         alignItems: 'center',
+        alignSelf: 'flex-end',
+        alignContent: 'space-between',
+        justifyContent: 'space-between',
     },
     user: {
         flexDirection: 'row',
-        alignSelf:'center',
+        // alignItems: 'center',
+        // alignSelf: 'center',
+        // alignContent: 'center',
+        // justifyContent: 'center',
         marginLeft: 40,
         marginRight: 50
     },
@@ -23,9 +30,5 @@ export const style = StyleSheet.create({
         fontFamily: theme.fonts.title700,
         fontSize: 24,
         color: theme.colors.heading
-    },
-    message: {
-        fontFamily: theme.fonts.text400,
-        color: theme.colors.highlight
     }
 });

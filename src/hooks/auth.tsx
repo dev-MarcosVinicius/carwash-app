@@ -6,12 +6,13 @@ import React,
     ReactNode,
     useEffect
 } from "react";
-import * as Google from 'expo-google-app-auth';
-import * as AuthSession from "expo-auth-session"
+import { logInAsync } from 'expo-google-app-auth';
+import { AuthSessionResult } from "expo-auth-session"
 
 // import { api } from "../services/api";
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { COLLECTION_USERS } from '../configs/database'
+import { androidClientId, androidStandaloneAppClientId } from "../configs/environment";
 
 export type User = {
     id: string;
@@ -33,7 +34,7 @@ type AuthProviderProps = {
     children: ReactNode;
 }
 
-type AuthorizationResponse = AuthSession.AuthSessionResult & {
+type AuthorizationResponse = AuthSessionResult & {
     params: {
         access_token?: string;
         error?: string;
@@ -50,8 +51,9 @@ function AuthProvider({ children }: AuthProviderProps) {
         try {
             setLoading(true);
 
-            const result = await Google.logInAsync({
-                androidClientId: '768959155777-u3r4fnov736q79b302kiva8mgr6chl70.apps.googleusercontent.com',
+            const result = await logInAsync({
+                androidClientId: androidClientId,
+                androidStandaloneAppClientId: androidClientId,
                 // iosClientId: YOUR_CLIENT_ID_HERE, ToDo Implementar autenticador do IOS
                 scopes: ['profile', 'email'],
             });
@@ -60,9 +62,10 @@ function AuthProvider({ children }: AuthProviderProps) {
 
                 const user = {
                     id: result.user.id ? result.user.id : '',
-                    userame: result.user.name ? result.user.name : '',
-                    firstName: result.user.givenName ? result.user.givenName : '',
-                    avatar: result.user.photoUrl ? result.user.photoUrl : '',
+                    name: result.user.name ? result.user.name : '',
+                    givenName: result.user.givenName ? result.user.givenName : '',
+                    familyName: result.user.familyName ? result.user.familyName : '',
+                    photoUrl: result.user.photoUrl ? result.user.photoUrl : '',
                     email: result.user.email ? result.user.email : '',
                     token: result.accessToken ? result.accessToken : ''
                 }
