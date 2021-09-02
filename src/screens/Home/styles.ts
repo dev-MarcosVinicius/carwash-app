@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { theme } from "../../global/theme";
 
 export const styles = StyleSheet.create({
     container: {
@@ -12,8 +13,15 @@ export const styles = StyleSheet.create({
         marginTop: 26,
         marginBottom: 42
     },
+    body: {
+        marginTop: 27,
+        marginHorizontal: 20,
+        borderRadius: 8,
+        height: 560,
+        maxHeight: 560,
+        backgroundColor: theme.colors.outview
+    },
     matches: {
-        marginTop: 24,
-        marginLeft: 24
+        borderRadius: 8
     }
 });

@@ -2,19 +2,21 @@ export const theme = {
     colors: {
       primary: '#E51C44',
       
-      secondary100: '#001076', // new
-      secondary90: '#003E9A',    
-      secondary80: '#408CFF', // new
-      secondary75: '#171F52',
-      secondary70: '#1B2565',
-      secondary60: '#1B2565',
-      secondary50: '#243189', 
-      secondary40: '#1D2766', 
-      secondary30: '#495BCC', 
+      secondary100: '#0065FF', // new
+      secondary90: '#E5EAF1',    
+      secondary80: '#FFFFFF', // new
+      secondary75: '#FFFFFF',
+      secondary70: '#E5EAF1',
+      secondary60: '#FFFFFF',
+      secondary50: '#E5EAF1', 
+      secondary40: '#E5EAF1', 
+      secondary30: '#FFFFFF', 
+      secondary20: '#D2E4FF',
      
       overlay: 'rgba(0,0,0,0.7)',
       highlight: '#ABB1CC',
-      heading: '#DDE3F0',
+      heading: '#5E9EFF',
+      outview: '#FFFFFF',
       line: '#991F36',
       on: '#32BD50',
   
