@@ -15,7 +15,6 @@ export default function index({ isCenter }: Props) {
                     marginVertical: 12
                 } : {
                     marginTop: 2,
-                    marginBottom: 31
                 }
             ]}
         />

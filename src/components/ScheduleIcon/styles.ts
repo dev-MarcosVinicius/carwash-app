@@ -6,7 +6,7 @@ export const style = StyleSheet.create({
         width: 64,
         height: 64,
         borderRadius: 8,
-        backgroundColor: theme.colors.discord,
+        backgroundColor: 'transparent',//theme.colors.heading,
         alignItems: 'center',
         justifyContent: 'center',
         marginRight: 20,

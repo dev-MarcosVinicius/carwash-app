@@ -10,15 +10,15 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 24,
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: 26,
-        marginBottom: 42
+        marginTop: '10%',
+        marginBottom: 22
     },
     body: {
         marginTop: 27,
         marginHorizontal: 20,
         borderRadius: 8,
-        height: 560,
-        maxHeight: 560,
+        height: '100%',
+        maxHeight: '65%',
         backgroundColor: theme.colors.outview
     },
     matches: {
