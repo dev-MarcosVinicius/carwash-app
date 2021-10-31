@@ -5,7 +5,9 @@ export const style = StyleSheet.create({
     container: {
         width: '100%',
         flexDirection: 'row',
-        alignSelf: 'center',
+        alignItems: 'center',
+        paddingHorizontal: 15,
+        marginTop: 12
     },
     content: {
         flex: 1,
@@ -13,6 +15,7 @@ export const style = StyleSheet.create({
     header: {
         width: '100%',
         flexDirection: 'row',
+        alignItems: 'center',
         justifyContent: 'space-between',
         marginBottom: 12,
     },
@@ -35,6 +38,7 @@ export const style = StyleSheet.create({
     dateInfo: {
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'space-between'
     },
     playerInfo: {
         flexDirection: 'row',
@@ -43,8 +47,9 @@ export const style = StyleSheet.create({
     date: {
         fontFamily: theme.fonts.text400,
         color: theme.colors.heading,
-        fontSize: 13,
-        marginLeft: 7
+        fontSize: 16,
+        // marginLeft: 7,
+        marginRight: 5
     },
     player: {
         fontFamily: theme.fonts.text400,

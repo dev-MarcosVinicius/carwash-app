@@ -15,16 +15,16 @@ export function ScheduleIcon({ scheduleId, iconId }: Props) {
     return (
         <View style={style.container}>
             {
-                iconId
-                ?
+                // false //iconId
+                // ?
+                // <Image 
+                //     source={{ uri }}
+                //     style={style.image}
+                //     resizeMode="cover"
+                // />
+                // :
                 <Image 
-                    source={{ uri }}
-                    style={style.image}
-                    resizeMode="cover"
-                />
-                :
-                <Image 
-                    source={{ uri: "../../assets/Logo.png" }}
+                    source={require("../../assets/Logo.png")}
                     style={style.image}
                     resizeMode="cover"
                 />

@@ -77,9 +77,11 @@ export function SchedulesCreate() {
                     />
 
                     <Text 
-                        style={[styles.label, 
-                        { marginLeft: 24, marginTop: 36, marginBottom: 18 }
-                        ]}>
+                        style={[
+                            styles.label,
+                            { marginLeft: 24, marginTop: 36, marginBottom: 18 }
+                        ]}
+                    >
                         Categoria
                     </Text>
 
